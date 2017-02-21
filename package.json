@@ -1,6 +1,6 @@
 {
   "name": "svidbraingames",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "devDependencies": {
     "babel-cli": "*",
     "babel-core": "*",
@@ -10,7 +10,9 @@
   "description": "hexlet project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "babel-node": "babel-node",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -25,11 +27,6 @@
   },
   "author": "Leonid Sviderskii",
   "license": "ISC",
-  "scripts": {
-    "babel-node": "babel-node",
-    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
-    "prepublish": "npm run build"
-  },
   "bugs": {
     "url": "https://github.com/svidersky/project-lvl1-s69/issues"
   },
