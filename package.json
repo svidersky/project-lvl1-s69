@@ -27,7 +27,7 @@
   "license": "ISC",
   "scripts": {
     "babel-node": "babel-node",
-    "build": "set NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublish": "npm run build"
   },
   "bugs": {
