@@ -1,4 +1,8 @@
 #!/bin/sh
 ':' //; exec "$(command -v nodejs || command -v node)" "$0" "$@"
 
-console.log("Welcome to the Brain Games!");
+import { getUserName, showUserName, showGameName } from '..'
+
+showGameName()
+const userName = getUserName()
+showUserName(userName)

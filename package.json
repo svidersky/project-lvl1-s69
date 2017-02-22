@@ -5,7 +5,12 @@
     "babel-cli": "*",
     "babel-core": "*",
     "babel-preset-env": "*",
-    "babel-preset-stage-0": "*"
+    "babel-preset-stage-0": "*",
+    "eslint": "^3.16.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.2",
+    "eslint-plugin-standard": "^2.0.1",
+    "readline-sync": "*"
   },
   "description": "hexlet project",
   "main": "index.js",
