@@ -9,8 +9,10 @@
     "eslint": "^3.16.0",
     "eslint-config-standard": "^6.2.1",
     "eslint-plugin-promise": "^3.4.2",
-    "eslint-plugin-standard": "^2.0.1",
-    "readline-sync": "*"
+    "eslint-plugin-standard": "^2.0.1"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.6"
   },
   "description": "hexlet project",
   "main": "index.js",
