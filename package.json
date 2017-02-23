@@ -4,11 +4,12 @@
   "devDependencies": {
     "babel-cli": "*",
     "babel-core": "*",
+    "babel-eslint": "*",
     "babel-preset-env": "*",
     "babel-preset-stage-0": "*",
-    "eslint": "^3.16.0",
-    "eslint-config-standard": "^6.2.1",
-    "eslint-plugin-promise": "^3.4.2",
+    "eslint": "*",
+    "eslint-config-airbnb-base": "*",
+    "eslint-plugin-import": "*",
     "eslint-plugin-standard": "^2.0.1"
   },
   "dependencies": {
@@ -19,7 +20,8 @@
   "scripts": {
     "babel-node": "babel-node",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "eslint": "eslint"
   },
   "repository": {
     "type": "git",

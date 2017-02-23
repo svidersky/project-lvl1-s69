@@ -1,7 +1,8 @@
 module.exports = {
-    "extends": "standard",
+    "extends": "airbnb-base",
     "plugins": [
         "standard",
-        "promise"
+        "promise",
+	"import"
     ]
 };
