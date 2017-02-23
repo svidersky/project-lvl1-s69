@@ -15,3 +15,5 @@ extends:
 
 rules:
   no-console: off
+  no-param-reassign: off
+  prefer-const: off

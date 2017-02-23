@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-import { getUserName, showUserName, showGameName } from '..';
+import { askUserName, showGameName } from '..';
 
 showGameName();
-const userName = getUserName();
-showUserName(userName);
+askUserName();
