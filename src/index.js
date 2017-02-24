@@ -32,7 +32,11 @@ export const isEven = (num) => {
   return 'no';
 };
 
-export const startGame = (userName) => {
+export const startGame = () => {
+  showGameName();
+  showGreetings();
+  const userName = getUserName();
+  shoUserName(userName);
   const iter = (acc) => {
     if (acc === 3) {
       return console.log(`Congratulations, ${userName}!`);
