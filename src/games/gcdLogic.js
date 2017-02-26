@@ -2,12 +2,13 @@ import { cons, car, cdr } from 'hexlet-pairs';
 import gameCoreLogic from '../lib/gameCoreLogic';
 import * as cf from '../lib/commonFunctions';
 
-const rulesDescription = 'Find the greatest common divisor of given numbers.\n';
+const rulesDescription = 'Find the greatest common divisor of given numbers.';
 
-const showQuestion = (pair) => {
+const generateQuestion = (pair) => {
   const number1 = car(pair);
   const number2 = cdr(pair);
-  console.log(`Question: ${number1} ${number2}`);
+  const question = `Question: ${number1} ${number2}`;
+  return question;
 };
 
 const generateQuizData = () => {
@@ -28,5 +29,5 @@ const calculateRightAnswer = (pair) => {
 };
 
 export default function startGCDGame() {
-  gameCoreLogic(rulesDescription, showQuestion, generateQuizData, calculateRightAnswer);
+  gameCoreLogic(rulesDescription, generateQuestion, generateQuizData, calculateRightAnswer);
 }

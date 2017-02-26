@@ -1,7 +1,7 @@
 import gameCoreLogic from '../lib/gameCoreLogic';
 import * as cf from '../lib/commonFunctions';
 
-const rulesDescription = 'What is the result of the expression? \n';
+const rulesDescription = 'What is the result of the expression?';
 
 const generateOperator = () => {
   const arr = ['+', '-', '*'];
@@ -33,13 +33,14 @@ const calculateRightAnswer = (data) => {
   }
 };
 
-const showQuestion = (data) => {
+const generateQuestion = (data) => {
   const number1 = data[0];
   const number2 = data[1];
   const operator = data[2];
-  console.log(`Question: ${number1} ${operator} ${number2}`);
+  const question = `Question: ${number1} ${operator} ${number2}`;
+  return question;
 };
 
 export default function startCalcGame() {
-  gameCoreLogic(rulesDescription, showQuestion, generateQuizData, calculateRightAnswer);
+  gameCoreLogic(rulesDescription, generateQuestion, generateQuizData, calculateRightAnswer);
 }

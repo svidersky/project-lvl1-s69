@@ -1,27 +1,47 @@
 import * as cf from './commonFunctions';
+import showMessage from './view';
+
+const gameCycles = 3;
+
+const welcomeMessage = 'Welcome to the Brain Games!';
+
+const generateGreetingsMessage = (name) => {
+  const message = `Hello, ${name}!`;
+  return message;
+};
+
+const generateCongratsMesage = (userName) => {
+  const message = `Congratulations, ${userName}!`;
+  return message;
+};
+const generateErrorMessage = (userAnswer, rightAnswer, userName) => {
+  const message = `'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'. Let's try again, ${userName}!`;
+  return message;
+};
+const correctMessage = 'Correct!';
 
 export default function gameCoreLogic(
   rulesDescription,
-  showQuestion,
+  generateQuestion,
   generateQuizData,
   calculateRightAnswer) {
-  cf.showWelcomeMessage();
-  cf.showRulesDescription(rulesDescription);
+  showMessage(welcomeMessage);
+  showMessage(rulesDescription);
   const userName = cf.getUserName();
-  cf.showGreetings(userName);
+  showMessage(generateGreetingsMessage(userName));
   const startQuiz = (rightAnswersCount) => {
-    if (rightAnswersCount === 3) {
-      return console.log(`Congratulations, ${userName}!`);
+    if (rightAnswersCount === gameCycles) {
+      return showMessage(generateCongratsMesage(userName));
     }
     let currentQuizData = generateQuizData();
-    showQuestion(currentQuizData);
+    showMessage(generateQuestion(currentQuizData));
     let userAnswer = cf.getUserAnswer();
     let rightAnswer = calculateRightAnswer(currentQuizData);
     if (rightAnswer === userAnswer) {
       rightAnswersCount += 1;
-      console.log('Correct!');
+      showMessage(correctMessage);
     } else {
-      return console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\n Let's try again, ${userName}!`);
+      return showMessage(generateErrorMessage(userAnswer, rightAnswer, userName));
     }
     return startQuiz(rightAnswersCount);
   };
