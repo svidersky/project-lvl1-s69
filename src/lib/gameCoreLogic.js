@@ -38,7 +38,7 @@ export default function gameCoreLogic(
     showMessage(generateQuestion(currentQuizData));
     const userAnswer = cf.getUserAnswer();
     const rightAnswer = calculateRightAnswer(currentQuizData);
-    if (rightAnswer === userAnswer) {
+    if (String(rightAnswer) === userAnswer) {
       rightAnswersCount += 1;
       showMessage(correctMessage);
     } else {

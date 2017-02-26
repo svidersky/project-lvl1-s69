@@ -18,7 +18,7 @@ const generateQuizData = () => {
 
 const calculateGCD = (number1, number2) => {
   if (number2 === 0) {
-    return String(number1);
+    return number1;
   }
   return calculateGCD(number2, number1 % number2);
 };

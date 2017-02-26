@@ -23,11 +23,11 @@ const calculateRightAnswer = (data) => {
   const operator = data[2];
   switch (operator) {
     case '+':
-      return String(number1 + number2);
+      return number1 + number2;
     case '-':
-      return String(number1 - number2);
+      return number1 - number2;
     case '*':
-      return String(number1 * number2);
+      return number1 * number2;
     default:
       return console.log('Unknown operator');
   }
