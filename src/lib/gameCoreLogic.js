@@ -33,10 +33,10 @@ export default function gameCoreLogic(
     if (rightAnswersCount === gameCycles) {
       return showMessage(generateCongratsMesage(userName));
     }
-    let currentQuizData = generateQuizData();
+    const currentQuizData = generateQuizData();
     showMessage(generateQuestion(currentQuizData));
-    let userAnswer = cf.getUserAnswer();
-    let rightAnswer = calculateRightAnswer(currentQuizData);
+    const userAnswer = cf.getUserAnswer();
+    const rightAnswer = calculateRightAnswer(currentQuizData);
     if (rightAnswer === userAnswer) {
       rightAnswersCount += 1;
       showMessage(correctMessage);

@@ -21,10 +21,8 @@ const isEven = (number) => {
 };
 
 const calculateRightAnswer = (number) => {
-  if (isEven(number)) {
-    return 'yes';
-  }
-  return 'no';
+  const rightAnswer = isEven(number) ? 'yes' : 'no';
+  return rightAnswer;
 };
 
 export default function startEvenGame() {
