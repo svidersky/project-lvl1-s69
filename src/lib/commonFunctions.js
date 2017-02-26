@@ -18,26 +18,5 @@ export const showGreetings = (name) => {
 export const generateRandomInt = () =>
   Math.floor(Math.random() * (100 - 1));
 
-export const generateOperator = () => {
-  const arr = ['+', '-', '*'];
-  const rand = Math.floor(Math.random() * arr.length);
-  return arr[rand];
-};
-
-export const showQuestion = (num) => {
-  console.log(`Question: ${num}`);
-};
-
-export const showQuestionCalc = (number1, number2, operator) => {
-  console.log(`Question: ${number1} ${operator} ${number2}`);
-};
-
 export const getUserAnswer = () =>
   readlineSync.question('Your answer: ');
-
-export const isEven = (num) => {
-  if (num % 2 === 0) {
-    return 'yes';
-  }
-  return 'no';
-};
