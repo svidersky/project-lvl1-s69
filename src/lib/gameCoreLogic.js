@@ -29,7 +29,8 @@ export default function gameCoreLogic(
   showMessage(rulesDescription);
   const userName = cf.getUserName();
   showMessage(generateGreetingsMessage(userName));
-  const startQuiz = (rightAnswersCount) => {
+  const startQuiz = (counter) => {
+    let rightAnswersCount = counter;
     if (rightAnswersCount === gameCycles) {
       return showMessage(generateCongratsMesage(userName));
     }
