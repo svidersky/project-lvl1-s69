@@ -1,5 +1,5 @@
 import gameCoreLogic from '../lib/gameCoreLogic';
-import * as cf from '../lib/commonFunctions';
+import { generateRandomInt } from '../lib/commonFunctions';
 
 const rulesDescription = 'Answer "yes" if number even otherwise answer "no".';
 
@@ -9,7 +9,7 @@ const generateQuestion = (number) => {
 };
 
 const generateQuizData = () => {
-  const number = cf.generateRandomInt();
+  const number = generateRandomInt(100, 1);
   return number;
 };
 

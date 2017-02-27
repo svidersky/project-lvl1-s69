@@ -1,6 +1,6 @@
 import { cons, car, cdr } from 'hexlet-pairs';
 import gameCoreLogic from '../lib/gameCoreLogic';
-import * as cf from '../lib/commonFunctions';
+import { generateRandomInt } from '../lib/commonFunctions';
 
 const rulesDescription = 'Find the greatest common divisor of given numbers.';
 
@@ -12,7 +12,7 @@ const generateQuestion = (pair) => {
 };
 
 const generateQuizData = () => {
-  const pair = cons(cf.generateRandomInt(), cf.generateRandomInt());
+  const pair = cons(generateRandomInt(100, 1), generateRandomInt(100, 1));
   return pair;
 };
 

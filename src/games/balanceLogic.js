@@ -1,10 +1,10 @@
 import gameCoreLogic from '../lib/gameCoreLogic';
-import * as cf from '../lib/commonFunctions';
+import { generateRandomInt } from '../lib/commonFunctions';
 
 const rulesDescription = 'Balance the given number.';
 
 const generateQuizData = () => {
-  const number = cf.generateRandomInt();
+  const number = generateRandomInt(1000, 1);
   return number;
 };
 

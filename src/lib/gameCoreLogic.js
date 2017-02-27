@@ -1,4 +1,4 @@
-import * as cf from './commonFunctions';
+import { getUserAnswer, getUserName } from './commonFunctions';
 import showMessage from './view';
 
 const gameCycles = 3;
@@ -27,7 +27,7 @@ export default function gameCoreLogic(
   calculateRightAnswer) {
   showMessage(welcomeMessage);
   showMessage(rulesDescription);
-  const userName = cf.getUserName();
+  const userName = getUserName();
   showMessage(generateGreetingsMessage(userName));
   const startQuiz = (counter) => {
     let rightAnswersCount = counter;
@@ -36,7 +36,7 @@ export default function gameCoreLogic(
     }
     const currentQuizData = generateQuizData();
     showMessage(generateQuestion(currentQuizData));
-    const userAnswer = cf.getUserAnswer();
+    const userAnswer = getUserAnswer();
     const rightAnswer = calculateRightAnswer(currentQuizData);
     if (String(rightAnswer) === userAnswer) {
       rightAnswersCount += 1;

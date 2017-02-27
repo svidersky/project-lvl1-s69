@@ -1,5 +1,5 @@
 import gameCoreLogic from '../lib/gameCoreLogic';
-import * as cf from '../lib/commonFunctions';
+import { generateRandomInt } from '../lib/commonFunctions';
 
 const rulesDescription = 'What is the result of the expression?';
 
@@ -11,8 +11,8 @@ const generateOperator = () => {
 
 const generateQuizData = () => {
   const data = [];
-  data.push(cf.generateRandomInt());
-  data.push(cf.generateRandomInt());
+  data.push(generateRandomInt(100, 1));
+  data.push(generateRandomInt(100, 1));
   data.push(generateOperator());
   return data;
 };
