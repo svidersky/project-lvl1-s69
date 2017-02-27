@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 
 export const generateRandomInt = () =>
-  Math.floor(Math.random() * (100 - 1));
+  Math.floor(Math.random() * (1000 - 1));
 
 export const getUserAnswer = () =>
   readlineSync.question('Your answer: ');
