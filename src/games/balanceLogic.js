@@ -17,13 +17,11 @@ const calculateRightAnswer = (number) => {
   const sortedNumbers = getSortedNumbersArray(number);
   let rebalance = false;
   for (let i = 1; i < sortedNumbers.length; i += 1) {
-    console.log('sorted', sortedNumbers[0], sortedNumbers[1], sortedNumbers[2]);
     if (sortedNumbers[i - 1] + 1 < sortedNumbers[i]) {
       rebalance = true;
       const half = (sortedNumbers[i - 1] + sortedNumbers[i]) / 2;
       sortedNumbers[i - 1] = Math.floor(half);
       sortedNumbers[i] = Math.ceil(half);
-      console.log('iter:', half, sortedNumbers[i], sortedNumbers[i - 1]);
     }
   }
 
