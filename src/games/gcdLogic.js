@@ -12,7 +12,7 @@ const generateQuestion = (pair) => {
 };
 
 const generateQuizData = () => {
-  const pair = cons(generateRandomInt(100, 1), generateRandomInt(100, 1));
+  const pair = cons(Math.abs(generateRandomInt(100, 1)), Math.abs(generateRandomInt(100, 1)));
   return pair;
 };
 

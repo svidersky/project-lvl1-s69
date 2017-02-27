@@ -9,7 +9,7 @@ const generateQuestion = (number) => {
 };
 
 const generateQuizData = () => {
-  const number = generateRandomInt(100, 1);
+  const number = Math.abs(generateRandomInt(100, 1));
   return number;
 };
 

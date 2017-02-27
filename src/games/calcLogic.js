@@ -11,8 +11,8 @@ const generateOperator = () => {
 
 const generateQuizData = () => {
   const data = [];
-  data.push(generateRandomInt(100, 1));
-  data.push(generateRandomInt(100, 1));
+  data.push(Math.abs(generateRandomInt(100, 1)));
+  data.push(Math.abs(generateRandomInt(100, 1)));
   data.push(generateOperator());
   return data;
 };

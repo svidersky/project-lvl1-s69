@@ -4,7 +4,7 @@ import { generateRandomInt } from '../lib/commonFunctions';
 const rulesDescription = 'Balance the given number.';
 
 const generateQuizData = () => {
-  const number = generateRandomInt(1000, 1);
+  const number = Math.abs(generateRandomInt(1000, 1));
   return number;
 };
 
